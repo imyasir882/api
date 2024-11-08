@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#user-list {
+    margin-top: 30px;
+}
+
+.user-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+    position: relative; /* Important for positioning buttons inside the card */
+}
+
+.user-card:hover {
+    transform: scale(1.02);
+}
+
+button.edit, button.delete {
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    position: relative;
+    top: 15px;
+    transform: translateY(-50%);
+    visibility: hidden; /* Keep buttons invisible */
+}
+
+.user-card:hover button.edit,
+.user-card:hover button.delete {
+    opacity: 1; /* Show buttons when hovering */
+    visibility: visible; /* Make buttons visible when hovering */
+}
+
+button.edit {
+    background-color: #28a745;
+}
+
+button.delete {
+    background-color: #e74c3c;
+}
+
+button.edit:hover {
+    opacity: 0.8;
+}
+
+button.delete:hover {
+    opacity: 0.8;
+}
